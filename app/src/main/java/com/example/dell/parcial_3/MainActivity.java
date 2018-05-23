@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendPost();
+               // sendPost();
             }
         });
     }
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 .subscribe(responseBodyResponse -> {
                     try {
                         if(responseBodyResponse.code() == 200){
-                            //
+                            Log.e("RESULT", responseBodyResponse.body().bytes().toString());
                         }
                     } catch (IOException e) {
                         e.printStackTrace();
